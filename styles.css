@@ -1,0 +1,48 @@
+body {
+    /* background-color: 	#202020; */
+    margin: 50px;
+    padding:50px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.button-style {
+     padding: 40px;
+}
+#input-Bar {
+    height: 35px;
+    width: 300px;
+}
+
+#search-Button {
+    background-color: rgb(15, 204, 24);
+    border-radius: 40%;
+    width: 100px;
+    height:60px;
+    font-size: 1em;
+    color: black;
+}
+
+#bing-Button {
+    font-family: Arial;
+    color: rgb(24, 219, 219);
+    
+}
+
+#google-Button {
+    color: yellow;
+    font-size: 1.5em;
+}
+
+#ask-Button {
+    border-radius: 100%;
+    background-color: red;
+    color: white;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+#duck-Button {
+    color:white;
+    font-family: Verdana;
+}

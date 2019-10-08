@@ -2,18 +2,60 @@
 
 <head>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles.css">
 	<script>
-		// TODO: create a handler
+		const form = document.getElementById("searchForm");
+		let actions = {
+			"google": "https://www.google.com/search",
+			"duckDuckGo": "https://duckduckgo.com/",
+			"bing": "https://www.bing.com/search",
+			"ask": "https://www.ask.com/web"
+		}
+		function setSearchEngine() {
+			console.log("testing if setSearchEngine function works");
+		let selectedRadioButton = document.querySelector("input[name=engine]:checked").value;
+		// let form = document.getElementById("searchForm");
+		form.setAttribute("action", actions[selectedRadioButton])
+		}
+	
     window.addEventListener("load", function(){
-        // TODO: register the handler
+	// let form = document.getElementById("searchForm");
+	form.addEventListener("submit", setSearchEngine);
+		
     });
+
 	</script>
 </head>
 
 <body>
+	<div class="search-bar">
+		<form id="searchForm">
+		<input id="input-Bar" type="text" name="q">
+		<!-- TODO: add form elements -->
+	</div>
+<br>
 
-	<form id="searchForm">
-    <!-- TODO: add form elements -->
+	<div>
+		<label id="google-Button" class="button-style">Google
+		<input type="radio" name="engine" value="google">
+		</label>
+		
+		<label id="duck-Button" class="button-style"> DuckDuckGo
+		<input type="radio" name="engine" value="duckDuckGo">
+		</label>
+		
+
+		<label id="bing-Button" class="button-style">Bing
+		<input type="radio" name="engine" value="bing">
+		</label>
+		
+
+		<label id="ask-Button" class="button-style">Ask
+		<input type="radio" name="engine" value="ask">
+		</label>
+	</div>
+<br>
+	<input id="search-Button" type="submit" value="Go!">
 	</form>
 
 </body>
